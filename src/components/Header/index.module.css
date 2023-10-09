@@ -1,3 +1,4 @@
+
 header {
   display: flex;
   align-items: center;
@@ -48,14 +49,4 @@ input {
   padding: 7px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-input::placeholder {
-  color: #000;
-  font-style: italic;
-}
-
-.entrada{
-    display: flex;
-    align-items: center;
 }

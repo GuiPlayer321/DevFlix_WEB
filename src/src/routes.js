@@ -15,6 +15,7 @@ export default function RoutesApp(){
                 <Route path="/filme/:id" element={<Filme/>}/>
                 <Route path="/favoritos" element={<Favoritos/>}/>
                 <Route path="/search" element={<Search/>}/>
+
                 <Route path="*" element={<Error/>}/>
             </Routes>
         </BrowserRouter>

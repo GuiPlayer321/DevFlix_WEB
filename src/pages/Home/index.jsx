@@ -20,7 +20,9 @@ export default function Home() {
         },
       });
 
+
       setFilmes(response.data.results.slice(0, 15));
+
       setLoading(false);
     }
 

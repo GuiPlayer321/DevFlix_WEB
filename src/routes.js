@@ -6,6 +6,7 @@ import Error from "./pages/Error";
 import Favoritos from "./pages/Favoritos";
 import Search from "./pages/Search";
 
+
 export default function RoutesApp(){
     return(
         <BrowserRouter>

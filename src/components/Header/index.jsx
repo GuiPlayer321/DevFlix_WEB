@@ -1,3 +1,4 @@
+
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./index.module.css";
 import { BiSearch, BiSolidCameraMovie, BiUserCircle } from "react-icons/bi";
@@ -38,3 +39,4 @@ export default function Header() {
     </header>
   );
 }
+

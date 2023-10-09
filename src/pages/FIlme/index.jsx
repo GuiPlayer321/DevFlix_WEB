@@ -43,6 +43,7 @@ export default function Filme() {
       (filmeSalvo) => filmeSalvo.id === filme.id
     );
 
+
     if (hasFilmes) {
       toast.warn("Esse filme já está na sua lista");
       return;
@@ -51,6 +52,7 @@ export default function Filme() {
     filmesSalvos.push(filme);
     localStorage.setItem("@devflix", JSON.stringify(filmesSalvos));
     toast.success("Filme adicionado com sucesso!");
+
   }
 
   return (
