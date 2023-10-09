@@ -4,6 +4,7 @@ import Filme from "./pages/FIlme";
 import Header from "./components/Header";
 import Error from "./pages/Error";
 import Favoritos from "./pages/Favoritos";
+import Search from "./pages/Search";
 
 export default function RoutesApp(){
     return(
@@ -13,6 +14,8 @@ export default function RoutesApp(){
                 <Route path="/" element={<Home/>}/>
                 <Route path="/filme/:id" element={<Filme/>}/>
                 <Route path="/favoritos" element={<Favoritos/>}/>
+                <Route path="/search" element={<Search/>}/>
+
                 <Route path="*" element={<Error/>}/>
             </Routes>
         </BrowserRouter>

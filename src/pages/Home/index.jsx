@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import api from "../../services/api";
-import { Link } from "react-router-dom";
 import styles from "./index.module.css";
 import MovieCard from "../../components/MovieCard";
 import { Bars } from "react-loader-spinner";
@@ -21,7 +20,9 @@ export default function Home() {
         },
       });
 
-      setFilmes(response.data.results.slice(0, 10));
+
+      setFilmes(response.data.results.slice(0, 15));
+
       setLoading(false);
     }
 

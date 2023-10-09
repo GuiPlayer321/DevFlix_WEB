@@ -1,0 +1,37 @@
+span {
+  color: rgb(238, 238, 49);
+  font-size: 30px;
+}
+
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:whitesmoke;
+}
+
+.filmList {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+}
+
+.container {
+  display: "flex";
+  justify-content: center;
+  align-self: center;
+
+  padding: 20px;
+  padding-top: 25px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  height: calc(100vh - 138px);
+  color: whitesmoke;
+  flex-direction: column;
+}

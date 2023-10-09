@@ -1,36 +1,39 @@
-import React, { useEffect, useState } from "react";
-import api from "../../services/api";
-import { Link } from "react-router-dom";
-import styles from "./index.module.css";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import MovieCard from "../../components/MovieCard";
+import styles from './index.module.css'
 import { Bars } from "react-loader-spinner";
-import Navigator from "../../components/Navigator";
+import api from "../../services/api";
 
-export default function Home() {
-  const [filmes, setFilmes] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [page, setPage] = useState(1);
+export default function Search() {
 
-  useEffect(() => {
-    async function loadFilmes() {
-      const response = await api.get("discover/movie", {
-        params: {
-          api_key: "e0f7312474706c4418b37e44e7781b91",
-          language: "pt-BR",
-          page: page,
-        },
-      });
+    const [searchParams] = useSearchParams()
+    const [filmes, setFilmes] = useState([])
+    const [loading, setLoading] = useState(true);
 
-      setFilmes(response.data.results.slice(0, 15));
+    const query = searchParams.get("q")
 
-      setLoading(false);
-    }
-
-    loadFilmes();
-  }, [page]);
+    useEffect(()=>{
+        async function searchFilmes() {
+            const response = await api.get("search/movie?", {
+              params: {
+                api_key: "e0f7312474706c4418b37e44e7781b91",
+                language: "pt-BR",
+                page: 1,
+                query: query,
+              },
+            });
+      
+            setFilmes(response.data.results);
+            setLoading(false);
+          }
+      
+          searchFilmes();
+    }, [query])
 
   return (
     <div className={styles.container}>
+        <h1>Resultados para:  <span> {query}</span></h1>
       {loading ? (
         <div className={styles.loading}>
           <h2>Carregando filmes ...</h2>
@@ -61,7 +64,6 @@ export default function Home() {
         </div>
       )}
 
-      <Navigator page={page} setPage={setPage} />
     </div>
   );
 }

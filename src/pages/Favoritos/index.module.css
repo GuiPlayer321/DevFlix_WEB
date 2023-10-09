@@ -36,3 +36,24 @@
     color: blue;
     margin-right: 14px;
 }
+
+.delete:hover{
+    cursor: pointer;
+}
+
+.myFilms li{
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 80px;
+    padding: 0 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    color: whitesmoke;
+}
+
+.imagem{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 80px
+
+}

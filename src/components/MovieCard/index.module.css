@@ -8,6 +8,8 @@
     display: flex;
     justify-content:  center; 
     color: whitesmoke;
+    transition: all 0.5s;
+
 }
 
 .card:hover{
@@ -18,7 +20,8 @@
     display: flex;
     margin: 10px;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
+
 }
 
 a{
